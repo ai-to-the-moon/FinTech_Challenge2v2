@@ -10,6 +10,7 @@ import sys
 import fire
 import questionary
 from pathlib import Path
+import csv
 
 from qualifier.utils.fileio import load_csv
 
@@ -23,6 +24,11 @@ from qualifier.filters.credit_score import filter_credit_score
 from qualifier.filters.debt_to_income import filter_debt_to_income
 from qualifier.filters.loan_to_value import filter_loan_to_value
 
+#changes working directory to this script file (shortcut)
+#https://stackoverflow.com/questions/509742/change-directory-to-the-directory-of-a-python-script
+import os
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
 
 def load_bank_data():
     """Ask for the file path to the latest banking data and load the CSV file.
@@ -30,7 +36,8 @@ def load_bank_data():
     Returns:
         The bank data from the data rate sheet CSV file.
     """
-
+    #needed to add this to set directory
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
     csvpath = questionary.text("Enter a file path to a rate-sheet (.csv):").ask()
     csvpath = Path(csvpath)
     if not csvpath.exists():
@@ -102,7 +109,19 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
     return bank_data_filtered
 
 
-def save_qualifying_loans(qualifying_loans):
+def save_csv(file, outputpath):
+    csvpath = outputpath    
+    #csvpath = Path("output.csv") - now user-specified
+    #print("Writing the data to a CSV file...")
+    with open(csvpath, 'w', newline = "") as csvfile:
+        csvwriter = csv.writer(csvfile)
+        #csvwriter.writerow(header)
+        for row in file:
+            csvwriter.writerow(row)
+
+
+#saves list of qualifying loans to user-specified location
+def save_qualifying_loans(loans_list):
     """Saves the qualifying loans to a CSV file.
 
     Args:
@@ -110,6 +129,19 @@ def save_qualifying_loans(qualifying_loans):
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
     # YOUR CODE HERE!
+
+    #prompt the user for whether they want to save their qualifying loans
+    answer = questionary.text("Do you want to save your qualifying loans, yes or no?").ask()
+    if answer == "yes":
+        #prompt user for output file path
+        csvpath = questionary.text("Enter the output file path(.csv):").ask()
+        csvpath = Path(csvpath)
+        #save the list of loans
+        save_csv(loans_list, csvpath)
+        print("Successfully saved!")
+    else:
+        #exit application
+        sys.exit("No save requested, exiting application")    
 
 
 def run():

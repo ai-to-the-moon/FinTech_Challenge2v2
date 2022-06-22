@@ -1,33 +1,60 @@
-# Project Title
+# Loan Qualifier Application
 
-Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
+This is a CLI (command line application) that mimics the behavior of a loan qualifier program, where a user can input their personal information (credit score, monthly debt, monthly income, desired loan amount, home value) and the application then matches them with loans that they qualify for. The user can then choose to save a list of the loans that are matched with them. 
+
+This is a challenge assignment from Rice's FinTech Bootcamp program due on June 23, 2022. The purpose of this assignment is to demonstrate knowledge working with README files, along with the questionary and fire libraries (to demonstrate working with CLIs), in addition to incorporating our python knowledge up to this point.
 
 ---
 
 ## Technologies
 
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
+This program is written in Python (verson ?) and developed using VS Code using Windows. Libraries incorporated are pathlib, csv, os, fire, and questionary (see parenthesis for versions used in program development).  
 
 ---
 
 ## Installation Guide
 
-In this section, you should include detailed installation notes containing code blocks and screenshots.
+Downloading the code & associated files using `git clone` from the repository is sufficient to download the program, ensure that the associated libaries (see Technologies section) are installed on your machine as well. If there are any issues with the library functions please refer to the versions used for app development (see Technnologies section for this information as well).  Running the `app.py` file will get the application started, please note that this is a CLI (commandline application).  
 
 ---
 
 ## Usage
 
-This section should include screenshots, code blocks, or animations explaining how to use your project.
+This program is designed to run from the command line (but will also run using VS Code or other environments), keep in mind that you need to be able to interact with a terminal in order to respond to the user prompts. The usage case below is an example of how to run this application using git bash. 
+
+First, ensure that the appropriate libraries are installed. Please refer to the Technologies section for the full list of referenced libraries. 
+
+```python
+pip install fire
+pip install questionary
+```
+
+After cloning the repository on your computer, `cd` into the loan_qualifier_app folder and type `python app.py` to run the program. 
+
+Here is an example of a successful interaction with the program that demonstrates saving the file: 
+
+insert image
+
+If you choose not to save the file, the prompts will appear as below: 
+
+insert image
+
+##A note on paths:
+
+Please keep in mind that the working directory is set to that of the `app.py` file when the program begins, so the input path for the rate sheet file should  be `data/daily_rate_sheet.csv` unless you save it in another location or choose to refer to another file saved elsewhere. Similarly simply specifying `output.csv` in the prompt for the output file path will just save your output in the `loan_qualifer_app` folder. 
+
+If you want to remove the capability of the program to reset the current working directory to app.py's folder please remove the following line of code from the beginning of the `app.py` file: 
+
+image
 
 ---
 
 ## Contributors
 
-In this section, list all the people who contribute to this project. You might want recruiters or potential collaborators to reach you, so include your contact email and, optionally, your LinkedIn or Twitter profile.
+Project contributors are the Rice FinTech bootcamp program team (instructur Eric Cadena) along with myself (Paula Koziol). 
 
 ---
 
 ## License
 
-When you share a project on a repository, especially a public one, it's important to choose the right license to specify what others can and can't with your source code and files. Use this section to include the license you want to use.
+MIT License
