@@ -59,7 +59,7 @@ If you want to remove the capability of the program to reset the current working
 
 ## Contributors
 
-Project contributors are myself (Paula K) and the Rice FinTech Bootcamp program team (with instructur Eric Cadena). 
+Project contributors are myself (Paula K) and the Rice FinTech Bootcamp program team (with instructor Eric Cadena). 
 
 ---
 
