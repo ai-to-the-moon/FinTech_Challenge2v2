@@ -1,6 +1,6 @@
 # Loan Qualifier Application
 
-This is a CLI (command line application) that mimics the behavior of a loan qualifier program, where a user can input their personal information (credit score, monthly debt, monthly income, desired loan amount, home value) and the application then matches them with loans that they qualify for. The user can then choose to save a list of the loans that are matched with them. 
+This is a CLI (command line interface) application that mimics the behavior of a loan qualifier program, where a user can input their personal information (credit score, monthly debt, monthly income, desired loan amount, home value) and the application then matches them with loans that they qualify for. The user can then choose to save a list of the loans that are matched with them. 
 
 This is a challenge assignment from Rice's FinTech Bootcamp program due on June 23, 2022. The purpose of this assignment is to demonstrate knowledge working with README files, along with the questionary and fire libraries (to demonstrate working with CLIs), in addition to incorporating our python knowledge up to this point.
 
@@ -8,7 +8,14 @@ This is a challenge assignment from Rice's FinTech Bootcamp program due on June 
 
 ## Technologies
 
-This program is written in Python (verson ?) and developed using VS Code using Windows. Libraries incorporated are pathlib, csv, os, fire, and questionary (see parenthesis for versions used in program development).  
+This program is written in Python (3.7.13) and developed using VS Code using Windows. Libraries incorporated are pathlib, csv (1.0), os, fire (0.4.0), and questionary (1.10.0) (see parenthesis for versions used in program development).  
+
+Here are some helpful links for further information on fire and questionary: 
+
+[Fire library](https://github.com/google/python-fire)
+
+[Questionary library](https://pypi.org/project/questionary/)
+
 
 ---
 
@@ -31,30 +38,31 @@ pip install questionary
 
 After cloning the repository on your computer, `cd` into the loan_qualifier_app folder and type `python app.py` to run the program. 
 
-Here is an example of a successful interaction with the program that demonstrates saving the file: 
+Here is an example of a successful interaction with the program that demonstrates using the application and saving the output: 
 
-insert image
+![image](images/ex_save.PNG)
 
 If you choose not to save the file, the prompts will appear as below: 
 
-insert image
+![image](images/ex_no_save.PNG)
 
-##A note on paths:
+
+## A note on paths:
 
 Please keep in mind that the working directory is set to that of the `app.py` file when the program begins, so the input path for the rate sheet file should  be `data/daily_rate_sheet.csv` unless you save it in another location or choose to refer to another file saved elsewhere. Similarly simply specifying `output.csv` in the prompt for the output file path will just save your output in the `loan_qualifer_app` folder. 
 
-If you want to remove the capability of the program to reset the current working directory to app.py's folder please remove the following line of code from the beginning of the `app.py` file: 
+If you want to remove the capability of the program to reset the current working directory to app.py's source folder please remove the following line of code from the beginning of the `app.py` file: 
 
-image
+![image](images/update_pwd.PNG)
 
 ---
 
 ## Contributors
 
-Project contributors are the Rice FinTech bootcamp program team (instructur Eric Cadena) along with myself (Paula Koziol). 
+Project contributors are myself (Paula K) and the Rice FinTech Bootcamp program team (with instructur Eric Cadena). 
 
 ---
 
 ## License
 
-MIT License
+None
