@@ -49,7 +49,7 @@ If you choose not to save the file, the prompts will appear as below:
 
 ## A note on paths:
 
-Please keep in mind that the working directory is set to that of the `app.py` file when the program begins, so the input path for the rate sheet file should  be `data/daily_rate_sheet.csv` unless you save it in another location or choose to refer to another file saved elsewhere. Similarly simply specifying `output.csv` in the prompt for the output file path will just save your output in the `loan_qualifer_app` folder. 
+Please keep in mind that the working directory is set to that of the `app.py` file when the program begins, so the input path for the rate sheet file should  be `data/daily_rate_sheet.csv` unless you save it in another location or choose to refer to another file saved elsewhere. Similarly simply specifying `output.csv` in the prompt for the output file path will just save your output in the repository folder. 
 
 If you want to remove the capability of the program to reset the current working directory to app.py's source folder please remove the following line of code from the beginning of the `app.py` file: 
 
