@@ -133,6 +133,9 @@ def save_qualifying_loans(loans_list):
     #prompt the user for whether they want to save their qualifying loans
     answer = questionary.text("Do you want to save your qualifying loans, yes or no?").ask()
     if answer == "yes":
+        #check if there are any loans to save
+        if len(loans_list) == 0:
+            sys.exit("System exiting, no matching loans were found")
         #prompt user for output file path
         csvpath = questionary.text("Enter the output file path(.csv):").ask()
         csvpath = Path(csvpath)
@@ -160,7 +163,6 @@ def run():
 
     # Save qualifying loans
     save_qualifying_loans(qualifying_loans)
-
-
+    
 if __name__ == "__main__":
     fire.Fire(run)

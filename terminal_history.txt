@@ -1,0 +1,43 @@
+    1  cd /D/bootcamp
+    2  ls
+    3  cd /D/FinTech_Challenge2v2
+    4  git status
+    5  ls
+    6  conda activate dev
+    7  python app.py
+    8  python app.py
+    9  python app.py
+   10  python app.py
+   11  python app.py
+   12  python app.py
+   13  python app.py
+   14  python app.py
+   15  python app.py
+   16  python app.py
+   17  history 50 > terminal_history.txt
+   18  git status
+   19  git commit -m "updated save function prompt for 0 loans and README"
+   20  git add . 
+   21  git status
+   22  git commit -m "updated save function prompt for 0 loans and README"
+   23  git push
+   24  git pull
+   25  git pull
+   26  cd /D/
+   27  git clone https://github.com/ai-to-the-moon/FinTech_Challenge2v2.git
+   28  git clone https://github.com/ai-to-the-moon/FinTech_Challenge2v2.git
+   29  git clone https://github.com/ai-to-the-moon/FinTech_Challenge2v2.git
+   30  cd /D/FinTEch_Challenge2v2
+   31  ls
+   32  python app.py
+   33  print("tested 0 qualifying loans list prompts, succeeded)
+print()
+python app.py
+ls
+"
+   34  print() ""
+   35  python app.py
+   36  python app.py
+   37  print("tested prompts for saving loan output list, succeeded")
+   38  python app.py
+   39  history 50 > terminal_history.txt

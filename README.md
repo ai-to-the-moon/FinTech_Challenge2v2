@@ -2,6 +2,8 @@
 
 This is a CLI (command line interface) application that mimics the behavior of a loan qualifier program, where a user can input their personal information (credit score, monthly debt, monthly income, desired loan amount, home value) and the application then matches them with loans that they qualify for. The user can then choose to save a list of the loans that are matched with them. 
 
+Updates to the `app.py` program were made to create a new function `save_qualifying_loans` that enables the user to save the list of loans that they qualify for to a directory of their choosing using the `questionary` library. 
+
 This is a challenge assignment from Rice's FinTech Bootcamp program due on June 23, 2022. The purpose of this assignment is to demonstrate knowledge working with README files, along with the questionary and fire libraries (to demonstrate working with CLIs), in addition to incorporating our python knowledge up to this point.
 
 ---
@@ -15,7 +17,6 @@ Here are some helpful links for further information on fire and questionary:
 [Fire library](https://github.com/google/python-fire)
 
 [Questionary library](https://pypi.org/project/questionary/)
-
 
 ---
 
@@ -59,10 +60,10 @@ If you want to remove the capability of the program to reset the current working
 
 ## Contributors
 
-Project contributors are myself (Paula K) and the Rice FinTech Bootcamp program team (with instructor Eric Cadena). 
+Project contributors are the Rice FinTech bootcamp program team (instructur Eric Cadena) who developed the original `app.py` application along with myself (Paula K) who's provided the application updates. 
 
 ---
 
 ## License
 
-None
+MIT License
